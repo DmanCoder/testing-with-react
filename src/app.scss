@@ -1,0 +1,51 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #121212;
+  background: #707174;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+  max-width: 980px;
+  margin: 20px auto 80px;
+  padding: 0 10px;
+}
+
+header {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0 10px;
+  background: #121212;
+
+  .wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 980px;
+
+    .logo {
+      display: block;
+      width: 120px;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+      img {
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
