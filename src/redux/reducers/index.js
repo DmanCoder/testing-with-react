@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 
 // REDUCERS
-import successReducer from './successReducer/successReducer';
+import postReducer from './postReducer/postReducer';
 
 // ACTIONS
 
 const rootReducer = combineReducers({
-  successRXS: successReducer,
+  successRXS: postReducer,
 });
 
 export default (state, action) => rootReducer(state, action);
