@@ -1,8 +1,9 @@
 import { GET_POSTS } from './postActionsType';
 import axios from 'axios';
 
-export const fetchPost = () => async (dispatch) => {
-  await axios
+export const fetchPostAXN = () => (dispatch) => {
+  console.log('running');
+  axios
     .get('https://jsonplaceholder.typicode.com/posts?_limit=10')
     .then((res) => {
       dispatch({
