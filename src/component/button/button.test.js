@@ -19,10 +19,13 @@ describe('<Button />', () => {
 
   describe('Render', () => {
     let wrapper;
+    let mockFnc;
     beforeEach(() => {
+      mockFnc = jest.fn();
+
       const props = {
         buttonText: 'Example Button Text',
-        emitEvent: () => {},
+        emitEvent: mockFnc,
       };
       wrapper = shallow(<Button {...props} />);
     });
@@ -30,6 +33,13 @@ describe('<Button />', () => {
     it('Should render a button', () => {
       const button = findByTestAttribute(wrapper, 'button-component');
       expect(button.length).toBe(1);
+    });
+
+    it('Should emit callback on click event', () => {
+      const button = findByTestAttribute(wrapper, 'button-component');
+      button.simulate('click');
+      const callBack = mockFnc.mock.calls.length;
+      expect(callBack).toBe(1);
     });
   });
 });
