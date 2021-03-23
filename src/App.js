@@ -13,7 +13,7 @@ import ListItem from './component/ListItem/listItem';
 import './app.scss';
 
 const App = ({ postRXS, fetchPostAXN }) => {
-  const onFetch = () => fetchPostAXN(); 
+  const onFetch = () => fetchPostAXN();
 
   const configButton = {
     buttonText: 'Get Posts',
@@ -21,7 +21,7 @@ const App = ({ postRXS, fetchPostAXN }) => {
   };
 
   return (
-    <div className="">
+    <div data-test="app-component" className="">
       <Header />
       <section className="main">
         <Headline
